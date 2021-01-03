@@ -1,0 +1,246 @@
+(defparameter *rutas-dist* '((Pantitlan (AgricolaOriental 1409)(Zaragoza 1320)(Hangares 1644)(Puebla 1380))
+(Zaragoza (GomezFarias 762) (Pantitlan 1320))
+(GomezFarias (BoulevardPuertoAereo 611) (Zaragoza 762))
+(BoulevardPuertoAereo (GomezFarias 611) (Balbuena 595))
+(Balbuena (Moctezuma 703) (BoulevardPuertoAereo 595))
+(Moctezuma (SanLazaro 478) (Balbuena 703))
+(SanLazaro (Candelaria 866) (Moctezuma 478) (Morelos 1296) (FloresMagon 907))
+(Candelaria (Merced 698) (SanLazaro 866) (Morelos 1062) (FrayServando 633))
+(Merced (PinoSuarez 745) (Candelaria 698))
+(PinoSuarez (IsabelLaCatolica 382) (Merced 745) (SanAntonioAbad 817) (Zocalo 745))
+(IsabelLaCatolica (SaltoDelAgua 445) (PinoSuarez 382))
+(SaltoDelAgua (Balderas 458)(IsabelLaCatolica 445) (Doctores 564) (SanJuanDeLetran 292))
+(Balderas (SaltoDelAgua 458) (Cuauhtemoc 409) (NiñosHeroes 665) (Juarez 659))
+(Cuauhtemoc (Balderas 409) (Insurgentes 793))
+(Insurgentes (Cuauhtemoc 793) (Sevilla 645))
+(Sevilla (Insurgentes 645) (Chapultepec 501))
+(Chapultepec (Sevilla 501) (Juanacatlan 973))
+(Juanacatlan (Chapultepec 973) (Tacubaya 1158))
+(tacubaya (observatorio 1262) (constituyentes 1005) (patriotismo 1133) (SanPedroDeLosPinos 1084) (Juanacatlan 1158))
+(observatorio (tacubaya 1262))
+(CuatroCaminos (Panteones 1639))
+
+(Panteones (CuatroCaminos 1639) (Tacuba 1416))
+
+(Tacuba (Panteones 1416) (Cuitlahuac 637) (Refineria 1295) (SanJoaquin 1163))
+
+(Cuitlahuac (Tacuba 637) (Popotla 620))
+
+(Popotla (Cuitlahuac 620) (ColegioMilitar 462))
+
+(ColegioMilitar (Popotla 462) (Normal 516))
+
+(Normal (ColegioMilitar 516) (SanCosme 657))
+
+(SanCosme (Normal 657) (Revolucion 537))
+
+(Revolucion (SanCosme 537) (Hidalgo 587))
+
+(Hidalgo (Revolucion 587) (BellasArtes 447) (Guerrero 702) (Juarez 251))
+
+(BellasArtes (Hidalgo 447) (Allende 387) (GaribaldiLagunilla 634) (SanJuanDeLetran 456))
+
+(Allende (BellasArtes 387) (Zocalo 602))
+
+(Zocalo (Allende 602) (PinoSuarez 745))
+
+(SanAntonioAbad (PinoSuarez 817) (Chabacano 642))
+
+(Chabacano (SanAntonioAbad 642) (Viaducto 774) (Obrera 1143) (LaViga 843) (Jamaica 1031) (LazaroCardenas 1000))
+
+(Viaducto (Chabacano 774) (Xola 490))
+
+(Xola (Viaducto 490) (VillaDeCortes 698))
+
+(VillaDeCortes (Xola 698) (Nativitas 750))
+
+(Nativitas (VillaDeCortes 750) (Portales 924))
+
+(Portales (Nativitas 924) (Ermita 748))
+
+(Ermita (Portales 748) (GeneralAnaya 838) (EjeCentral 895) (Mexicaltzingo 1805))
+
+(GeneralAnaya (Ermita 838) (Tasqueña 1330)) 
+
+(Tasqueña (GeneralAnaya 1330))
+(IndiosVerdes (Deportivo18DeMarzo 1166))
+
+(Deportivo16deMarzo (IndiosVerdes 1166) (Potrero 966) (Lindavista 1075) (LaVillaBasilica 570))
+
+(Potrero (Deportivo18DeMarzo 966) (LaRaza 1106))
+
+(LaRaza (Potrero 1106) (Tlatelolco 1445) (AutobusesDelNorte 975) (Misterios 892))
+
+(Tlatelolco (LaRaza 1445) (Guerrero 1042))
+
+(Guerrero (Tlatelolco 1042) (Hidalgo 702) (Buenavista 521) (GaribaldiLagunilla 757))
+
+(Juarez (Hidalgo 251) (Balderas 659))
+
+(NiñosHeroes (Balderas 665) (HospitalGeneral 559))
+
+(HospitalGeneral (NiñosHeroes 559) (CentroMedico 653))
+(CentroMedico (HospitalGeneral 653) (EtiopiaPlazaDeLaTransparencia 1119) (LazaroCardenas 1059) (Chilpancingo 1152))
+
+(EtiopiaPlazaDeLaTransparencia (CentroMedico 1119) (Eugenia 950))
+
+(Eugenia (EtiopiaPlazaDeLaTransparencia 950) (DivisionDelNorte 715))
+
+(DivisionDelNorte (Eugenia 715) (Zapata 794))
+
+(Zapata (DivisionDelNorte 794) (Coyoacan 1153) (Hospital20DeNoviembre 450) (ParqueDelosVenados 563))
+
+(Coyoacan (Zapata 1153) (ViverosDerechosHumanos 908))
+
+(ViverosDerechosHumanos (Coyoacan 908) (MiguelAngelDeQuevedo 824))
+
+(MiguelAngelDeQuevedo (ViverosDerechosHumanos 824) (Copilco 1295))
+
+(Copilco (MiguelAngelDeQuevedo 1295) (Universidad 1306))
+
+(Universidad (Copilco 1306))
+(SantaAnita (Jamaica 758) (LaViga 633) (Coyuya 968))
+
+(Jamaica (SantaAnita 758) (FrayServando 1033) (Mixiuhca 942) (Chabacano 1031))
+
+(FrayServando (Jamaica 1033) (Candelaria 633))
+
+(Morelos (Candelaria 1062) (CanalDelNorte 910) (Tepito 498) (SanLazaro 1296))
+
+(CanalDelNorte (Morelos 910) (Consulado 884))
+
+(Consulado (CanalDelNorte 884) (Bondojito 645) (ValleGomez 679) (EduardoMolina 815))
+
+(Bondojito (Consulado 645) (Talisman 959))
+
+(Talisman (Bondojito 959) (MartinCarrera 1129))
+
+(MartinCarrera (Talisman 1129) (LaVillaBasilica 1141))
+(Politecnico (InstitutoDelPetroleo 1188))
+
+(InstitutoDelPetroleo (Politecnico 1188) (AutobusesDelNorte 1067) (Vallejo 755) (Lindavista 1258))
+
+(AutobusesDelNorte (InstitutoDelPetroleo 1067) (LaRaza 975))
+(Misterios (LaRaza 892) (ValleGomez 969))
+
+(ValleGomez (Misterios 969) (Consulado 679))
+
+(EduardoMolina (Consulado 815) (Aragon 860))
+
+(Aragon (EduardoMolina 860) (Oceania 1219))
+
+(Oceania (Aragon 1219) (TerminalAerea 1174) (DeportivoOceania 863) (RomeroRubio 809))
+
+(TerminalAerea (Oceania 1174) (Hangares 1153))
+
+(Hangares (TerminalAerea 1153) (Pantitlan 1644))
+(ElRosario (Temozoc 1257) (AquilesSerdan 1615))
+
+(Temozoc (ElRosario 1257) (Azcapotzalco 973))
+
+(Azcapotzalco (Temozoc 973) (FerreriaArenaCiudadDeMexico 1173))
+
+(FerreriaArenaCiudadDeMexico (Azcapotzalco 1173) (Norte45 1072))
+
+(Norte45 (FerreriaArenaCiudadDeMexico 1072) (Vallejo 660))
+
+(Vallejo (Norte45 660) (InstitutoDelPetroleo 755))
+
+(Lindavista (InstitutoDelPetroleo 1258) (Deportivo18deMarzo 1075))
+
+(LaVillaBasilica (Deportivo18DeMarzo 570) (MartinCarrera 1141))
+(BarrancaDelMuerto (Mixcoac 1476))
+(Mixcoac (BarrancaDelMuerto 1476) (InsurgentesSur 651) (SanAntonio 788))
+(SanAntonio (Mixcoac 788) (SanPedroDeLosPinos 606))
+(SanPedroDelosPinos (SanAntonio 606) (Tacubaya 1084))
+(Constituyentes (Tacubaya 1005) (Auditorio 1430))
+(Auditorio (Constituyentes 1430) (Polanco 812))
+(Polanco (Auditorio 812) (SanJoaquin 1163))
+(Refineria (Tacuba 1295) (Camarones 952))
+(Camarones (Refineria 952) (AquilesSerdan 1402))
+(AquilesSerdan (Camarones 1402) (ElRosario 1615))
+(AgricolaOriental (Pantitlan 1409) (CanalDeSanJuan 1093))
+
+(CanalDeSanJuan (AgricolaOriental 1093) (Tepalcates 1456))
+
+(Tepalcates (CanalDeSanJuan 1456) (Guelatao 1161))
+
+(Guelatao (Tepalcates 1161) (PeñonViejo 2206))
+
+(PeñonViejo (Guelatao 2206) (Acatitla 1379))
+
+(Acatitla (PeñonViejo 1379) (SantaMarta 1100))
+
+(SantaMarta (Acatitla 1100) (LosReyes 1783))
+
+(LosReyes (SantaMarta 1783) (LaPaz 1956))
+
+(LaPaz (LosReyes 1956))
+(Patriotismo (Chilpancingo 955) (Tacubaya 1133))
+(Chilpancingo (Patriotismo 955) (CentroMedico 1152))
+(LazaroCardenas (CentroMedico 1059) (Chabacano 1000))
+(Mixiuhca (Jaimaca 942) (Velodromo 821))
+(Velodromo (Mixiuhca 821) (CiudadDeportiva 1110))
+(Puebla (Velodromo 1110) (Pantitlan 1380))
+(AgricolaOriental (Pantitlan 1409) (CanalDeSanJuan 1093))
+
+(CanalDeSanJuan (AgricolaOriental 1093) (Tepalcates 1456))
+
+(Tepalcates (CanalDeSanJuan 1456) (Guelatao 1161))
+
+(Guelatao (Tepalcates 1161) (PeñonViejo 2206))
+
+(PeñonViejo (Guelatao 2206) (Acatitla 1379))
+
+(Acatitla (PeñonViejo 1379) (SantaMarta 1100))
+
+(SantaMarta (Acatitla 1100) (LosReyes 1783))
+
+(LosReyes (SantaMarta 1783) (LaPaz 1956))
+
+(LaPaz (LosReyes 1956))
+(Buenavista (Guerrero 521))
+(Lagunilla (Tepito 611) (GaribaldiLagunilla 472))
+(Tepito (Lagunilla 611) (Morelos 498))
+(FloresMagon (SanLazaro 907) (RomeroRubio 908))
+(RomeroRubio (FloresMagon 908) (Oceania 809))
+(DeportivoOceania (Oceania 863) (BosqueDeAragon 1165))
+(BosqueDeAragon (DeportivoOceania 1165) (VillaDeAragon 784))
+(VillaDeAragon (BosqueDeAragon 784) (Nezahualcoyotl 1335))
+(Nezahualcoyotl (VillaDeAragon 1335) (Impulsora 1393))
+(Impulsora (Nezahualcoyotl 1393) (RioDeLosRemedios 436))
+(RioDeLosRemedios (Impulsora 436) (Muzquiz 1155))
+(Ecatepec (Muzquiz 1155) (Olimpica 596))
+(Olimpica (Ecatepec 596) (CiudadAzteca 574))
+(CiudadAzteca (Olimpica 574))
+(Tlahuac (Tlaltenco 1298))
+
+(Tlaltenco (Tlahuac 1298) (Zapotitlan 1115))
+
+(Zapotitlan (Tlaltenco 1115) (Nopalera 1276))
+
+(Nopalera (Zapotitlan 1276) (Olivos 1360))
+
+(Olivos (Nopalera 1360) (Teonco 490))
+
+(Teonco (Olivos 490) (PerifericoOriente 1545))
+
+(PerifericoOriente (Teonco 1545) (Calle11 1111))
+
+(Calle 11 (PerifericoOriente 1111) (LomasEstrella 906))
+
+(LomasEstrella (Calle11 906) (SanAndresTomatlan 1060))
+
+(SanAndresTomatlan (LomasEstrella 1060) (Culhuacan 990))
+
+(Culhuacan (SanAndresTomatlan 990) (Atlalilco 1671))
+
+(Mexicaltzingo (Atlililco 1922) (Ermita 1805))
+
+(EjeCentral (Ermita 895) (ParqueDeLosVenados 1280))
+
+(ParqueDeLosVenados (EjeCentral 1280) (Zapata 563))
+
+(Hospital20DeNoviembre (Zapata 450) (InsurgentesSur 725))
+
+(InsurgentesSur (Hospital20DeNoviembre 725) (Mixcoac 651))))

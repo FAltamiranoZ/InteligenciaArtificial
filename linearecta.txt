@@ -1,0 +1,5 @@
+(defun lrest(est1 est2)
+      (setq lat1 (cadddr est1) lat2 (cadddr est2) lon1 (car (cddddr est1)) lon2 (car (cddddr est2)))
+      (setq distlr (sqrt (+ (exp (- lat1 lat2)) (exp (- lon1 lon2)))))
+      distlr
+)

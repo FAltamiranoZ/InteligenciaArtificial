@@ -1,0 +1,101 @@
+Recordar declarar la variable fuera de la funcion para evitar que se pierda el valor.
+
+Recordar que poner al final la variable hace que eso sea lo que imprima el programa; si 
+pongo 2 entonces solo imprime la ultima.
+
+También recordar que después de un (cond lo siguiente va con (()); es decir, doble y esto 
+aplica para todas las condiciones especificadas excepto el t. Esto se debe a que todas las
+instrucciones que vayan a realizarse por haberse cumplido la cond se encuentran anidadas en 
+ese parentesis, es el unico parentesis que no implica una funcion.
+
+Se pueden poner ifs sin condicion de falsedad.
+
+CLISP pasa en las funciones valores, pero no referencias; por lo que para que una funcion
+modifique verdaderamente el valor de una variables es necesario que el nombre de la variable
+a trabajar tenga un nombre distinto a la que se da como parametro
+
+Se pueden poner comentarios con "comentario aqui"
+
+Niveles y reversaProf son individuales, gradoMayor e imprimeNivel usan niveles como 
+funcion auxiliar. gradoMayor esta incorrecta.
+
+//Niveles.
+(setq lst '(a (1 2 3) (4 (5 6) 7) 8)) (setq aux 1) (setq cont 0)
+(Defun nivel (lst)
+   (cond
+      ((null lst) '0)
+      (t
+      (cond
+         ((not (atom (car lst))) (incf aux) (nivel (car lst))))
+      (cond
+         ((not (null (cdr lst))) (nivel (cdr lst)))
+         (t (if (< cont aux) (setq cont aux)) (decf aux)))
+      cont)))
+
+
+
+
+
+//Imprime alreves a profundidad
+(setq lst '(a (1 2 3) (4 (5 6) 7) 8))
+
+(defun reversaProf (lst)
+  (if (consp lst) (nconc (reversaProf (cdr lst)) (list (reversaProf (car lst))))
+      lst))
+
+
+
+
+
+//Grado mayor
+(setq top 0) (setq grado 0)
+
+(defun gradonivel (lst)
+   (cond
+      ((null lst) top)
+         (t
+         (if
+            (atom (car lst)) (incf top))
+            (gradonivel(cdr lst))
+      )
+   )
+)
+
+(defun grado (list)
+   (cond
+      ((null list) grado)
+      (t
+         (setq top (gradonivel list))
+         (if (< grado top) (setq grado top)
+            (cond
+               ((atom (car list)) (when (not (= top 0)) (setq top 0)) (grado (cdr list)))
+               (t (when (not (= top 0)) (setq top 0))
+                                (grado (car list))
+             )
+         )
+      )(when (not (= top 0)) (setq top 0))
+      (grado (cdr list))
+   ))
+)
+
+
+
+
+
+//Imprime a niveles
+//el setq lst2 () puede tener lo que sea adentro, el punto es que tenga algo
+(setq n 0) (setq cont2 0) (setq lstAux nil) (setq lst2 '(0))
+
+(Defun imprimeNivel (lst)
+   (setq cont2 (nivel lst))
+   (dotimes (cuenta cont2 lst2)
+      (nconc lst2 (listaPorNivel lst n)) (incf n))
+   (pop lst2) lst2)
+
+(defun listaPorNivel (lst n)
+  (cond
+    ((atom lst) '())
+    ((= n 0) (remove-if (complement #'atom) lst))
+    (t (mapcan #'(lambda (lst)
+                   (listaPorNivel lst (1- n)))
+               lst))))

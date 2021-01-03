@@ -1,0 +1,27 @@
+
+
+(with-open-file (str "C:/Users/Meteorok/Desktop/ProyectoIA/respuesta.txt"
+                     :direction :output
+                     :if-exists :supersede
+                     :if-does-not-exist :create)
+  (format str "~d~%~%" (posiblesf 2)))
+
+///////////////////////////////////////////////////////////////////////////////////
+
+using System.Diagnostics;
+
+        Process cmd = new Process();
+        cmd.StartInfo.FileName = "cmd.exe";
+        cmd.StartInfo.RedirectStandardInput = true;
+        cmd.StartInfo.RedirectStandardOutput = true;
+        cmd.StartInfo.CreateNoWindow = true;
+        cmd.StartInfo.UseShellExecute = false;
+        cmd.Start();
+
+        cmd.StandardInput.WriteLine("clisp");
+        cmd.StandardInput.WriteLine("(load " + '"' + "C:/Users/Meteorok/Desktop/ProyectoIA/lisp1" + '"' + ")");
+        cmd.StandardInput.WriteLine("(suma)");
+        cmd.StandardInput.Close();
+        cmd.WaitForExit();
+
+

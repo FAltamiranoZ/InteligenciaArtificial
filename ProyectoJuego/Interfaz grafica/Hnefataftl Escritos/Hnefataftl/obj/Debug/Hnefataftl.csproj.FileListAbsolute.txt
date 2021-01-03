@@ -1,0 +1,10 @@
+c:\users\andrewsauto\source\repos\Hnefataftl\Hnefataftl\bin\Debug\Hnefataftl.exe.config
+c:\users\andrewsauto\source\repos\Hnefataftl\Hnefataftl\bin\Debug\Hnefataftl.exe
+c:\users\andrewsauto\source\repos\Hnefataftl\Hnefataftl\bin\Debug\Hnefataftl.pdb
+c:\users\andrewsauto\source\repos\Hnefataftl\Hnefataftl\obj\Debug\Hnefataftl.csprojAssemblyReference.cache
+c:\users\andrewsauto\source\repos\Hnefataftl\Hnefataftl\obj\Debug\Hnefataftl.Properties.Resources.resources
+c:\users\andrewsauto\source\repos\Hnefataftl\Hnefataftl\obj\Debug\Hnefataftl.csproj.GenerateResource.cache
+c:\users\andrewsauto\source\repos\Hnefataftl\Hnefataftl\obj\Debug\Hnefataftl.csproj.CoreCompileInputs.cache
+c:\users\andrewsauto\source\repos\Hnefataftl\Hnefataftl\obj\Debug\Hnefataftl.exe
+c:\users\andrewsauto\source\repos\Hnefataftl\Hnefataftl\obj\Debug\Hnefataftl.pdb
+c:\users\andrewsauto\source\repos\Hnefataftl\Hnefataftl\obj\Debug\Hnefataftl.Tablero.resources
